@@ -1,6 +1,5 @@
 use clap::Parser;
-use bs58;
-use std::io::{self, Read, Write};
+use std::io::{self, Read as _, Write as _};
 use std::fs::File;
 use std::path::PathBuf;
 
@@ -83,7 +82,7 @@ fn main() -> io::Result<()> {
             }
         } else {
             // Write without line wrapping
-            print!("{}", encoded);
+            print!("{encoded}");
         }
     }
 
